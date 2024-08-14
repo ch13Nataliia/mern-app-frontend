@@ -20,6 +20,10 @@ const handleOnChange = (e) => {
   }
   })
 }
+const handleSubmit = (e) => {
+  e.preventDefault()
+}
+
 console.log('data login', data)
   return (
     <section id="login">
@@ -28,7 +32,7 @@ console.log('data login', data)
           <div className="w-20 h-20  mx-auto">
             <img src={LoginIcons} alt="logo-icon" />
           </div>
-          <form className='pt-8' >
+          <form className='pt-8' onSubmit={handleSubmit}>
             <div className="grid">
               <label>Email: </label>
               <div className=" bg-slate-100 p-2 ">
